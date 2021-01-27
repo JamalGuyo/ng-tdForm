@@ -7,12 +7,14 @@ import { IUserSettings } from '../models/user-setting';
   styleUrls: ['./user-settings-form.component.scss'],
 })
 export class UserSettingsFormComponent implements OnInit {
-  userSettings: IUserSettings = {
+  originalUserSettings: IUserSettings = {
     name: 'Milton',
     emailOffers: true,
     interfaceStyle: 'dark',
     subscriptionType: 'Annually',
   };
+
+  userSettings: IUserSettings = { ...this.originalUserSettings };
 
   constructor() {}
 
