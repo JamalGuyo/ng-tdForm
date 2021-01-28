@@ -1,6 +1,6 @@
 <div class="container">
   <h1>User settings form</h1>
-  <form #form="ngForm">
+  <form #form="ngForm" ngNativeValidate>
     <div class="form-group">
       <label for="name">Name</label>
       <input
@@ -9,6 +9,7 @@
         class="form-control"
         name="name"
         [(ngModel)]="userSettings.name"
+        required
       />
     </div>
     <div class="form-check form-group">
