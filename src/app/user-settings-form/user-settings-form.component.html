@@ -1,6 +1,6 @@
 <div class="container">
   <h1>User settings form</h1>
-  <form #form="ngForm">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
     <div class="form-group">
       <label for="name">Name</label>
       <input
